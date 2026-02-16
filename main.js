@@ -1,6 +1,6 @@
 {
   function onYouTubeIframeAPIReady() {
-    let player = new YT.Player("player", {
+    player = new YT.Player("player", {
       videoId: "Rk54JNn7Qw4",
       playerVars: { mute: 1 },
       events: {

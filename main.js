@@ -1,6 +1,6 @@
 {
   function onYouTubeIframeAPIReady() {
-    player = new YT.Player("player", {
+    let player = new YT.Player("player", {
       videoId: "Rk54JNn7Qw4",
       playerVars: { mute: 1 },
       events: {
@@ -20,5 +20,5 @@
   let vocal = new Audio("vocal.flac");
   let track = new Audio("track.flac");
   player.nextElementSibling.oninput = e => vocal.volume = +e.target.value * .01;
-  player.nextElementSibling.nextElementSibling.oninput = e => track = +e.target.value * .01;
+  player.nextElementSibling.nextElementSibling.oninput = e => track.volume = +e.target.value * .01;
 }

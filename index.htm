@@ -1,4 +1,6 @@
 <meta charset=utf-8 content="initial-scale=yes"name=viewport>
+<script src=main.js defer></script>
+<script src=//www.youtube.com/iframe_api defer></script>
 <style>
 input {
   display: block;
@@ -10,31 +12,4 @@ iframe {
   width: 100%
 }
 </style>
-<script src=//www.youtube.com/iframe_api defer></script>
-<script>{
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player("player", {
-      videoId: "Rk54JNn7Qw4",
-      playerVars: { mute: 1 },
-      events: {
-        onReady: e => {
-          alert("準備完了");
-        },
-        onStateChange: e => {
-          let data = e.data;
-          if (data == 1) {
-            vocal.play();
-          } else if (data == 2) {
-
-          }
-        }
-      }
-    });
-  }
-  let vocal = new Audio("vocal.flac");
-  let track = new Audio("track.flac");
-}
-</script>
-<div id=player></div>
-<input type=range>
-<input type=range>
+<div id=player></div><input type=range><input type=range>
